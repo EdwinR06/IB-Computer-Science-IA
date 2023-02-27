@@ -13,5 +13,25 @@ public class Book {
         this.pages = pages;
         this.isCheckedOut = false;
     }
-    
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public boolean getIsCheckedOut() {
+        return isCheckedOut;
+    }
+
 }
