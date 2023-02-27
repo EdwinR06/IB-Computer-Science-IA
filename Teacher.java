@@ -1,3 +1,9 @@
 public class Teacher extends User {
-    public Teacher() {}
+
+    private String password;
+
+    public Teacher(String username, String password) {
+        super(username);
+        this.password = password;
+    }
 }
