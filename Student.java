@@ -19,7 +19,16 @@ public class Student extends User {
         return pastCheckedOutBooks;
     }
 
+    public void checkoutBook(Book book) {
+        if(book.getIsCheckedOut() == false) {
+            this.checkedOutBook = book;
+            book.setIsCheckedOut(true);
+        }
+    }
 
+    public void returnCurrentBook() {
+        checkedOutBook.setIsCheckedOut(false);
+    }
 
 
     
