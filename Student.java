@@ -11,5 +11,16 @@ public class Student extends User {
         this.pastCheckedOutBooks = new ArrayList<Book>();
     }
 
+    public Book getCheckedOutBook() {
+        return checkedOutBook;
+    }
+
+    public ArrayList<Book> getPastCheckedOutBooks() {
+        return pastCheckedOutBooks;
+    }
+
+
+
+
     
 }
