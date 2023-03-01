@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Library {
@@ -83,6 +84,36 @@ public class Library {
                 break;
             }
         }
+    }
+
+    public Book getBookByTitle(String title) {
+        Book bookTitle = null;
+        for(int i = 0; i < booksCapacity; i++) {
+            if(books[i].getTitle() == title) {
+                bookTitle = books[i];
+            }
+        }
+        return bookTitle;
+    }
+
+    public ArrayList<Book> getBooksByAuthor(String author) {
+        ArrayList<Book> booksAuthor = new ArrayList<>();
+        for(int i = 0; i < booksCapacity; i++) {
+            if(books[i].getAuthor() == author) {
+                booksAuthor.add(books[i]);
+            }
+        }
+        return booksAuthor;
+    }
+
+    public ArrayList<Book> getBooksByGenre(String genre) {
+        ArrayList<Book> booksGenre = new ArrayList<>();
+        for(int i = 0; i < booksCapacity; i++) {
+            if(books[i].getAuthor() == genre) {
+                booksGenre.add(books[i]);
+            }
+        }
+        return booksGenre;
     }
 
 }
