@@ -58,7 +58,16 @@ public class Library {
                 }
             }
         }
-    
+    }
+
+    public void loginStudent(String username) {
+        if(currentUser == null){
+            for(int i = 0; i < users.size(); i++) {
+                if(users.get(i).getUsername() == username) {
+                    currentUser = users.get(i);
+                }
+            }
+        }
     }
 
 
