@@ -44,6 +44,10 @@ public class Library {
         return users;
     }
 
+    public User getCurrentUser() {
+        return currentUser;
+    }
+
 
 
 
