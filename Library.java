@@ -48,9 +48,18 @@ public class Library {
         return currentUser;
     }
 
-
-
-
+    public void loginTeacher(String username, String password) {
+        if(currentUser == null){
+            for(int i = 0; i < users.size(); i++) {
+                if(users.get(i) instanceof Teacher){
+                    if(users.get(i).getUsername() == username &&  ((Teacher) users.get(i)).getPassword() == password) {
+                        currentUser = users.get(i);
+                    }
+                }
+            }
+        }
+    
+    }
 
 
 }
