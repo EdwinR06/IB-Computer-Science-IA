@@ -76,4 +76,13 @@ public class Library {
         }
     }
 
+    public void checkoutBook(Book book) {
+        for(int i = 0; i < booksCapacity; i++) {
+            if(books[i] == book && books[i].getIsCheckedOut() == false && currentUser instanceof Student) {
+                ((Student) currentUser).checkoutBook(book);
+                break;
+            }
+        }
+    }
+
 }
