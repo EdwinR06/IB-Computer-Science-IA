@@ -69,6 +69,11 @@ public class Library {
             }
         }
     }
-
+    
+    public void logout() {
+        if(currentUser != null) {
+            currentUser = null;
+        }
+    }
 
 }
