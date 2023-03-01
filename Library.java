@@ -36,7 +36,15 @@ public class Library {
         }
     }
 
-    
+    public int getBooksCapacity() {
+        return booksCapacity;
+    }
+
+    public ArrayList<User> getUsers() {
+        return users;
+    }
+
+
 
 
 
