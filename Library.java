@@ -45,6 +45,19 @@ public class Library {
         return users;
     }
 
+    public void addUser(User user) {
+        boolean inUsers = false;
+        for(int i = 0; i < users.size(); i++) {
+            if(users.get(i) == user) {
+                inUsers = true;
+                break;
+            } 
+        }
+        if(!inUsers) {
+            users.add(user);
+        }
+    }
+
     public User getCurrentUser() {
         return currentUser;
     }
