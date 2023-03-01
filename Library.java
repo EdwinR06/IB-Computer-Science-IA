@@ -58,6 +58,21 @@ public class Library {
         }
     }
 
+    public void createStudent(String username) {
+        if(currentUser instanceof Teacher) {
+            boolean exists = false;
+            for(int i = 0; i < users.size(); i++) {
+                if(users.get(i).getUsername() == username) {
+                    exists = true;
+                }
+            }
+
+            if(!exists) {
+                addUser(new Student(username));
+            }
+        }
+    }
+
     public User getCurrentUser() {
         return currentUser;
     }
